@@ -1,3 +1,6 @@
+html {
+	font-family:sans-serif;
+}
 #board {
 	background-color:#eee;
 	margin:0 auto;
@@ -7,4 +10,15 @@
 	height:100px;
 	text-align:center;
 	width:100px;
+}
+#board td:hover {
+	background-color:#ddd;
+	cursor:pointer;
+}
+#board td.filled:hover {
+	background-color:#eee;
+	cursor:default;
+}
+h1 {
+	text-align:center;
 }

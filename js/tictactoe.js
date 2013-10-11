@@ -4,6 +4,7 @@ $('#board').on('click', 'td', function() {
 		val = $this.text();
 	if(!val.length) {
 		$this.text(turn);
+		$this.addClass('filled');
 		if(checkWinner()) {
 			alert(turn + ' wins!');
 			resetBoard();
@@ -14,13 +15,11 @@ $('#board').on('click', 'td', function() {
 			return;
 		}
 		turn = turn == 'X' ? 'O' : 'X';
-	} else {
-		alert('can\'t do that!');
 	}
 });
 
 function resetBoard() {
-	$('#board td').text('');
+	$('#board td').text('').removeClass('filled');
 	turn = 'X';
 }
 
