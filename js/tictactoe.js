@@ -6,17 +6,21 @@ $('#board').on('click', 'td', function() {
 		$this.text(turn);
 		$this.addClass('filled');
 		if(checkWinner()) {
-			alert(turn + ' wins!');
+			log(turn + ' wins!');
 			resetBoard();
 			return;
 		} else if(!checkAvailableMoves()) {
-			alert('Draw!');
+			log('Draw!');
 			resetBoard();
 			return;
 		}
 		turn = turn == 'X' ? 'O' : 'X';
 	}
 });
+
+function log(text) {
+	$('#status').prepend(text + '<br>');
+}
 
 function resetBoard() {
 	$('#board td').text('').removeClass('filled');

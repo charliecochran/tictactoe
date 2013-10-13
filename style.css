@@ -19,6 +19,11 @@ html {
 	background-color:#eee;
 	cursor:default;
 }
+#status {
+	margin:0 auto;
+	padding:10px;
+	width:300px;
+}
 h1 {
 	text-align:center;
 }
